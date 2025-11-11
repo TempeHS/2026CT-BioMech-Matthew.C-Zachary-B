@@ -1,8 +1,18 @@
-# 2026CT-BioMech-Matthew.C-Zachary-B
-## What we are making
-### We are going to make a biomedical mechatronic that can detect fine particles that can irritate lungs (Dust, air pollutants and chemicals).
-## How we intend it to look
-### We intend to make it in a compact box shape that can fit or slightly be over the size of a palm.
+# Cleaner, Lighter Lungs
+
+### This project is being created for our patient Mohey, it will be used to detect air particles that may damage his lungs. As he wants to continue working on construction sites, this project seeks to allow him to return to work whilst still aiding him in avoiding irreversible damage to his lungs. We will be creating a system that can detect dust and other air particles that may harm his lungs through the use of a dust and air quality sensor along with alerts to tell Mohey when he is near those air particles.
+
+## Development Team
+
+### Matthew C : https://github.com/Astros44
+### Zachary B : https://github.com/Zacha1tack
+
 ## Mechatronic components:
-### - ITEM 1
-### - ITEM 2
+
+### - 1 Arduino UNO board
+### - 1 Micro B cable
+### - 1 Dust sensor
+### - 1 Air quality sensor
+### - 1 Speaker
+### - 2 LEDs
+### - 5 Arduino Kit Cables
