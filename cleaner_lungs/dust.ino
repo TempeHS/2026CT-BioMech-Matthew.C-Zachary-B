@@ -17,7 +17,7 @@ void dust()
 {
     duration = pulseIn(pin, LOW);
     lowpulseoccupancy = lowpulseoccupancy+duration;
-    if ((millis()-starttime) > sampletime_ms)//if the sampel time == 30s
+    if ((millis()-starttime) > sampletime_ms)//if the sample time == 30s
     {
        ratio = lowpulseoccupancy/(sampletime_ms*10.0);  // Integer percentage 0=>100
        concentration = 1.1*pow(ratio,3)-3.8*pow(ratio,2)+520*ratio+0.62; // using spec sheet curve
