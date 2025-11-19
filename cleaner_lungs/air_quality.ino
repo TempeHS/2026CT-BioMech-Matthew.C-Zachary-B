@@ -1,9 +1,9 @@
 #include <Air_Quality_Sensor.h>
 
+AirQualitySensor sensor(A0);
+
 void air_quality_setup() {
-  AirQualitySensor sensor(A0);
-  while (!Serial)
-    ;
+  while (!Serial);
   Serial.println("Waiting sensor to init...");
   delay(20000);
 

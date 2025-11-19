@@ -10,3 +10,5 @@ The Air Quality sensor will be on pin A0.
 I believe the setup prints " waiting to init..", until it has initiated, then if it has not after 20 seconds, then it prints "Sensor error"
 End of 17/11/25
 ----------------------------------
+Added serial monitor setup in source file
+Debugged part of this file

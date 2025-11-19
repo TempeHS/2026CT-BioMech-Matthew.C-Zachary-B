@@ -1,12 +1,13 @@
 void setup() {
+  serial_monitor();
   air_quality_setup();
-  dust_setup();
-  led_setup();
 }
 
 void loop() {
   air_quality();
-  dust();
-  led();
   delay(100);
+}
+
+void serial_monitor() {
+              
 }
