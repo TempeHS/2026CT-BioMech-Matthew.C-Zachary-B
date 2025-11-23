@@ -8,6 +8,7 @@ void air_quality_setup() {
   delay(20000);
 
   if (sensor.init()) {
+    
     Serial.println("Sensor ready.");
   } else {
     Serial.println("Sensor ERROR!");
