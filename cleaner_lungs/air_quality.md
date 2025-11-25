@@ -21,3 +21,6 @@ Second computer has an issue where the upload does not work, as it appears that 
 End of 24/11/25
 ----------------------------------
 Code finally uploaded to arduino board
+Code works, and can print to serial monitor the value of the sensor, and how fresh the air is.
+End of 26/11/25
+----------------------------------
