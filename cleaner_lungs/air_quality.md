@@ -20,3 +20,4 @@ First computer had an issue where it would not detect the port
 Second computer has an issue where the upload does not work, as it appears that arduino cannot communicate properly with the computer to upload
 End of 24/11/25
 ----------------------------------
+Code finally uploaded to arduino board
