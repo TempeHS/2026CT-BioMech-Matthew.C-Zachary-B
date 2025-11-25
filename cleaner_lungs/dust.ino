@@ -1,48 +1,76 @@
 const int DUST_SENSOR_PIN = 8;
-const int LED_PIN = 5;
-const int SPEAKER_PIN = 6;
 
-// Threshold for single pulse duration (microseconds)
-const unsigned long PULSE_THRESHOLD = 100;  // Adjust based on testing
+// Detection Parameters
+const unsigned long SAMPLE_TIME_MS = 5000;        // Check every 5 seconds
+const unsigned long DUST_THRESHOLD = 30000;       // Adjust for your environment
+
+// Variables
+unsigned long duration;
+unsigned long starttime;
+unsigned long lowpulseoccupancy = 0;
 
 void dust_setup() {
   Serial.begin(9600);
-  
   pinMode(DUST_SENSOR_PIN, INPUT);
-  pinMode(LED_PIN, OUTPUT);
-  pinMode(SPEAKER_PIN, OUTPUT);
+  starttime = millis();
   
-  Serial.println("=== Real-Time Dust Detection ===");
-  Serial.print("Pulse threshold: ");
-  Serial.print(PULSE_THRESHOLD);
-  Serial.println(" μs");
+  Serial.println("=== Dust Detection Module ===");
+  Serial.print("Threshold: ");
+  Serial.println(DUST_THRESHOLD);
   Serial.println();
 }
 
 void dust() {
-  // Measure single LOW pulse duration
-  unsigned long pulseDuration = pulseIn(DUST_SENSOR_PIN, LOW);
-  
-  // Instant detection based on pulse length
-  bool dustDetected = (pulseDuration > PULSE_THRESHOLD);
-  
-  if (dustDetected) {
-    // Dust particle detected
-    digitalWrite(LED_PIN, HIGH);
-    tone(SPEAKER_PIN, 1500, 500);
+  // Check for dust presence
+  if (isDustDetected()) {
+    // DUST DETECTED - Call your main alert function
+    Serial.println("⚠️  DUST DETECTED - Triggering alert system");
     
-    Serial.print("⚠️  Particle detected | Pulse: ");
-    Serial.print(pulseDuration);
-    Serial.println(" μs");
-    
-    delay(50);  // Brief alert
-    digitalWrite(LED_PIN, LOW);
+    // TODO: Call your main alert function here
+    // triggerMainAlert();
     
   } else {
-    // No significant particle
-    digitalWrite(LED_PIN, LOW);
-    noTone(SPEAKER_PIN);
+    // NO DUST - All clear
+    Serial.println("✓  Clean air ");
+  }
+}
+
+/**
+ * Check if dust is present
+ * 
+ * Returns:
+ *   true  - Dust detected above threshold
+ *   false - Air is clean
+ * 
+ * This function accumulates LOW pulse duration over SAMPLE_TIME_MS
+ * and compares to DUST_THRESHOLD to determine if dust is present.
+ */
+bool isDustDetected() {
+  // Accumulate pulse duration
+  duration = pulseIn(DUST_SENSOR_PIN, LOW);
+  lowpulseoccupancy += duration;
+
+  // Check if sample period elapsed
+  if ((millis() - starttime) >= SAMPLE_TIME_MS) {
+    
+    // Determine if threshold exceeded
+    bool dustPresent = (lowpulseoccupancy > DUST_THRESHOLD);
+    
+    // Debug output
+    Serial.print("LPO: ");
+    Serial.print(lowpulseoccupancy);
+    Serial.print(" | Threshold: ");
+    Serial.print(DUST_THRESHOLD);
+    Serial.print(" | Detected: ");
+    Serial.println(dustPresent ? "YES" : "NO");
+    
+    // Reset for next sample period
+    lowpulseoccupancy = 0;
+    starttime = millis();
+    
+    return dustPresent;
   }
   
-  delay(10);  // Continuous monitoring
+  // Still accumulating data, return last known state
+  return false;  // Default to clean until full sample collected
 }

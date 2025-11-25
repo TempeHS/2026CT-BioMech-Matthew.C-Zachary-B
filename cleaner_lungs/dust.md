@@ -37,5 +37,8 @@ End of 17/11/25
 - Changed dust sensor measuring dust to binary detection of dust
 
 Used Copilot to change dust sensor from measuring concentrations of dust in values, now the sensor measures if there is dust or no dust
+The serial monitor shows if the sensors detects dust
 
 End of 26/11/25
+
+------------------------------------------------------------------------------------------------------------------------------------------------
