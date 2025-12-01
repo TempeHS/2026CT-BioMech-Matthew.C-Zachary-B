@@ -24,3 +24,4 @@ Code finally uploaded to arduino board
 Code works, and can print to serial monitor the value of the sensor, and how fresh the air is.
 End of 26/11/25
 ----------------------------------
+Added functions so that the led and speaker can read the sensors to activate
