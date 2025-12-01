@@ -1,8 +1,8 @@
 const int DUST_SENSOR_PIN = 8;
 
 // Detection Parameters
-const unsigned long SAMPLE_TIME_MS = 5000;        // Check every 5 seconds
-const unsigned long DUST_THRESHOLD = 30000;       // Adjust for your environment
+const unsigned long SAMPLE_TIME_MS = 1000;
+const unsigned long DUST_THRESHOLD = 10000;       // Adjust for your environment
 
 // Variables
 unsigned long duration;
@@ -24,14 +24,14 @@ void dust() {
   // Check for dust presence
   if (isDustDetected()) {
     // DUST DETECTED - Call your main alert function
-    Serial.println("⚠️  DUST DETECTED - Triggering alert system");
+    Serial.println("⚠️  DUST DETECTED ");
     
     // TODO: Call your main alert function here
     // triggerMainAlert();
     
   } else {
     // NO DUST - All clear
-    Serial.println("✓  Clean air ");
+    Serial.println(" No Dust ");
   }
 }
 

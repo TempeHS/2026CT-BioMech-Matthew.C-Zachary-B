@@ -1,12 +1,13 @@
 void setup() {
-  serial_monitor();
-  air_quality_setup();
+
   dust_setup();
+
 }
 
 void loop() {
-  air_quality();
+
   dust();
+
   delay(100);
 }
 
