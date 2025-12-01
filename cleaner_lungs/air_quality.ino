@@ -2,7 +2,7 @@
 
 AirQualitySensor sensor(A0);
 
-bool cleanair = true;
+bool air_quality_cleanair = true;
 
 void air_quality_setup() {
   while (!Serial);
@@ -36,20 +36,13 @@ void air_quality() {
   delay(1000);
 }
 
-void air_quality_read () {
-  sensor.getValue(); // Reads the numerical value of the sensor
-}
 
 void air_quality_check () {
   int quality = sensor.slope();
 
-  if (quality == AirQualitySensor::FORCE_SIGNAL || quality == AirQualitySensor::HIGH_POLLUTION || quality == AirQualitySensor::LOW_POLLUTION) {
-    cleanair = false;
+  if (quality != AirQualitySensor::FRESH_AIR) {
+    air_quality_cleanair = false;
   } else if(quality == AirQualitySensor::FRESH_AIR) {
-    cleanair = true;
+    air_quality_cleanair = true;
   }
-}
-
-void air_quality_status () {
-  sensor.slope();
 }
