@@ -1,7 +1,7 @@
 const int DUST_SENSOR_PIN = 8;
 
 // Detection Parameters
-const unsigned long SAMPLE_TIME_MS = 1000;
+const unsigned long SAMPLE_TIME_MS = 500;
 const unsigned long DUST_THRESHOLD = 10000;       // Adjust for your environment
 
 // Variables
@@ -70,7 +70,5 @@ bool isDustDetected() {
     
     return dustPresent;
   }
-  
-  // Still accumulating data, return last known state
-  return false;  // Default to clean until full sample collected
+
 }
