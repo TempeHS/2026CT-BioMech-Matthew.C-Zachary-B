@@ -61,3 +61,23 @@ const unsigned long SAMPLE_TIME_MS = 500;
 #### End of 1/12/25
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+#### 2/12/25
+
+- Implementing code into main file (cleaner_lungs.ino)
+  - Testing dust sensor binary detection to activate speaker and led alert
+
+- The code used to implement dust sensor into main file:
+~~~
+  if (isDustDetected()) {
+    Serial.println("Dust detected! Alerting...");
+    speaker();         // sound alert
+    led(true);   // turn LED on/flash
+  } else {
+    led(false);  // ensure LED off when clear
+  }
+  delay(100);
+~~~
+
+#### End of 2/12/25
+
+------------------------------------------------------------------------------------------------------------------------------------------------

@@ -30,3 +30,11 @@ Speaker should make a continous beeping sound with delay in between beeps.
 #### End of 1/12/25
 
 ---------------------------------------------------------------
+#### 2/12/25
+
+- Code is being implemented in main file (cleaner_lungs.ino)
+  - Testing speaker activation with air quality sensor and dust sensor detection
+
+#### End of 2/12/25
+
+---------------------------------------------------------------
