@@ -7,10 +7,13 @@ void setup() {
 }
 
 void loop() {
-  air_quality();
-  dust();
-  speaker();
-  led();
+  if (isDustDetected()) {
+    Serial.println("Dust detected! Alerting...");
+    speaker();         // sound alert
+    led(true);   // turn LED on/flash
+  } else {
+    led(false);  // ensure LED off when clear
+  }
   delay(100);
 }
 
