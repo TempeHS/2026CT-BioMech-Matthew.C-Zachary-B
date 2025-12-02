@@ -6,7 +6,5 @@ void led_setup () {
 }
 
 void led () {
-
-  digitalWrite(ledPIN, True)
-  
+  digitalWrite(ledPIN, HIGH);
 }
