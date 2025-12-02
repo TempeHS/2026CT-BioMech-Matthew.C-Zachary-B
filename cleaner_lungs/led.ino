@@ -1,4 +1,4 @@
-int ledPIN = 7;
+int ledPIN = 3;
 
 
 void led_setup () {
@@ -6,8 +6,7 @@ void led_setup () {
 }
 
 void led () {
-  if (air_quality_cleanair == false || dust_cleanair == false) {
-    digitalWrite(ledPIN, True)
-  }
 
+  digitalWrite(ledPIN, True)
+  
 }
