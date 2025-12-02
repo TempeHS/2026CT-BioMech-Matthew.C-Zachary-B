@@ -1,4 +1,5 @@
 void setup() {
+  serial_monitor();
   air_quality_setup();
   dust_setup();
   speaker_setup();
