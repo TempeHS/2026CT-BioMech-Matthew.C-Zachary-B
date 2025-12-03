@@ -5,6 +5,6 @@ void led_setup () {
   pinMode(ledPIN, OUTPUT);
 }
 
-void led () {
+void led_alert () {
   digitalWrite(ledPIN, HIGH);
 }

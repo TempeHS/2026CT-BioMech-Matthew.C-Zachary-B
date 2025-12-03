@@ -7,14 +7,10 @@ void setup() {
 }
 
 void loop() {
-  if (isDustDetected()) {
-    Serial.println("Dust detected! Alerting...");
-    speaker();         // sound alert
-    led(true);   // turn LED on/flash
-  } else {
-    led(false);  // ensure LED off when clear
-  }
-  delay(100);
+  if (air_quality_check() == false || isDustDetected() == true) { // air quality will return true if air is clean, ust will return false if air is clean
+    speaker();
+    led_alert();
+  } else {}
 }
 
 void serial_monitor() {
