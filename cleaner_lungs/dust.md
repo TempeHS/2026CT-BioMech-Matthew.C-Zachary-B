@@ -83,3 +83,21 @@ const unsigned long SAMPLE_TIME_MS = 500;
 #### End of 2/12/25
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### 3/12/25
+
+ - New code to implement dust sensor + air quality sensor:
+
+ ~~~
+ void loop() {
+  if (air_quality_check() == false || isDustDetected() == true) { // air quality will return true if air is clean, ust will return false if air is clean
+    speaker();
+    led_alert();
+  } else {}
+}
+~~~
+
+ - Serial monitor is stuck on Air Quality SY�
+
+#### End of 3/12/25
+
