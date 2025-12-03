@@ -25,3 +25,6 @@ https://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/
 ### If the sensor reads anything above (AirQualitySensor::FRESH_AIR), it will set the variable cleanair to false, which can then indicate to the led and buzzer to go off.
 #### End of 1/12/25
 ----------------------------------
+### Made "air_quality_check();" a bool function, and made it return a value based on whether there was any pollution detected.
+### Also fixed up the main file due to issues with led function
+### The main function air_quality is mostly useless now, and only really exists because it is an original loop.

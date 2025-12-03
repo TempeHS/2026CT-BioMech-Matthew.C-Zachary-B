@@ -7,4 +7,5 @@ void led_setup () {
 
 void led_alert () {
   digitalWrite(ledPIN, HIGH);
+  delay(50);
 }

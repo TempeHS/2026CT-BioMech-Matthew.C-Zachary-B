@@ -7,7 +7,7 @@ void setup() {
 }
 
 void loop() {
-  if (air_quality_check() == false || isDustDetected() == true) { // air quality will return true if air is clean, ust will return false if air is clean
+  if (air_quality_check() == false || isDustDetected() == true) { // air quality will return true if air is clean, dust will return false if air is clean
     speaker();
     led_alert();
   } else {}

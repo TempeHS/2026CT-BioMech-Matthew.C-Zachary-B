@@ -6,7 +6,7 @@ AirQualitySensor sensor(A0);
 void air_quality_setup() {
   while (!Serial);
   Serial.println("Waiting for Air Quality Sensor to initiate");
-  delay(20000);
+  delay(10000);
 
   if (sensor.init()) {
     
