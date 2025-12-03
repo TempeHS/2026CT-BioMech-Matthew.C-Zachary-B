@@ -8,4 +8,6 @@
 #### End of 2/12/25
 ----------------------------------
 ### LED code needs to be fixed up to get the led to flash, as right now it will just turn the led on and never off
-###
+### LED should now flash when dust is detected
+#### End of 3/12/25
+----------------------------------

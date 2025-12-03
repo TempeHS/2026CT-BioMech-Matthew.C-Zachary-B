@@ -16,25 +16,6 @@ void air_quality_setup() {
   }
 }
 
-void air_quality() {
-  int quality = sensor.slope();
-
-  Serial.print("Air Quality Sensor value: ");
-  Serial.println(sensor.getValue());
-
-  if (quality == AirQualitySensor::FORCE_SIGNAL) {
-    Serial.println("High pollution! Force signal active.");
-  } else if (quality == AirQualitySensor::HIGH_POLLUTION) {
-    Serial.println("High pollution!");
-  } else if (quality == AirQualitySensor::LOW_POLLUTION) {
-    Serial.println("Low pollution!");
-  } else if (quality == AirQualitySensor::FRESH_AIR) {
-    Serial.println("Fresh air.");
-  }
-
-  delay(1000);
-}
-
 
 bool air_quality_check () {
   int quality = sensor.slope();

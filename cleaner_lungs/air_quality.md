@@ -28,3 +28,6 @@ https://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/
 ### Made "air_quality_check();" a bool function, and made it return a value based on whether there was any pollution detected.
 ### Also fixed up the main file due to issues with led function
 ### The main function air_quality is mostly useless now, and only really exists because it is an original loop.
+### Removed main funcion air_quality to save space and make the ino file cleaner
+#### End of 3/12/25
+----------------------------------
