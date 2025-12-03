@@ -38,3 +38,18 @@ Speaker should make a continous beeping sound with delay in between beeps.
 #### End of 2/12/25
 
 ---------------------------------------------------------------
+
+#### 3/12/25
+
+- New code to implement speaker into main file
+ 
+ ~~~
+ void loop() {
+  if (air_quality_check() == false || isDustDetected() == true) { // air quality will return true if air is clean, ust will return false if air is clean
+    speaker();
+    led_alert();
+  } else {}
+}
+
+ - Serial monitor stuck on air quality setup
+ ~~~

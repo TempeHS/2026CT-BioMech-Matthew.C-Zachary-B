@@ -1,5 +1,8 @@
 void setup() {
-  serial_monitor();
+  Serial.begin(9600);
+  Serial.println("Baud rate 9600");
+  Serial.println("------------------");
+  
   air_quality_setup();
   dust_setup();
   speaker_setup();
@@ -13,8 +16,3 @@ void loop() {
   } else {}
 }
 
-void serial_monitor() {
-  Serial.begin(9600);
-  Serial.println("Serial Monitor Configured For 9600");
-  Serial.println("----------------------------------");
-}
