@@ -14,5 +14,6 @@
 ### - 1 Dust sensor
 ### - 1 Air quality sensor
 ### - 1 Speaker
-### - 2 LEDs
-### - 5 Arduino Kit Cables
+### - 1 LED
+### - 3 Arduino Kit Cables
+### - 1 Dust Sensor Cable

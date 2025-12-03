@@ -2,7 +2,6 @@
 
 AirQualitySensor sensor(A0);
 
-bool air_quality_cleanair = true;
 
 void air_quality_setup() {
   while (!Serial);
@@ -37,12 +36,14 @@ void air_quality() {
 }
 
 
-void air_quality_check () {
+bool air_quality_check () {
   int quality = sensor.slope();
+  bool air_quality_cleanair = true;
 
   if (quality != AirQualitySensor::FRESH_AIR) {
     air_quality_cleanair = false;
   } else if(quality == AirQualitySensor::FRESH_AIR) {
     air_quality_cleanair = true;
   }
+  return air_quality_cleanair;
 }
