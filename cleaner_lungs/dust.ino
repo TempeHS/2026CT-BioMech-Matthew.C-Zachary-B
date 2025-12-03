@@ -59,8 +59,6 @@ bool isDustDetected() {
     // Debug output
     Serial.print("LPO: ");
     Serial.print(lowpulseoccupancy);
-    Serial.print(" | Threshold: ");
-    Serial.print(DUST_THRESHOLD);
     Serial.print(" | Detected: ");
     Serial.println(dustPresent ? "YES" : "NO");
     
@@ -70,5 +68,5 @@ bool isDustDetected() {
     
     return dustPresent;
   }
-
+  return false;  // Return false while still sampling
 }
