@@ -1,5 +1,6 @@
 void setup() {
   Serial.begin(9600);
+  delay(200);
   Serial.println("Baud rate 9600");
   Serial.println("------------------");
   
