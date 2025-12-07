@@ -11,3 +11,6 @@
 ### LED should now flash when dust is detected
 #### End of 3/12/25
 ----------------------------------
+### Added print to serial monitor when LED is setup, so that it is easier to debug
+#### End of 8/12/25
+----------------------------------
