@@ -32,4 +32,7 @@ https://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/
 #### End of 3/12/25
 ----------------------------------
 ### Error with the setup of air quality sensor is fixed with the removal of the "sensor.init" part.
-###
+### Redid "air_quality_check()", and also added printing to serial into it, for degugging
+### Re-removed air_quality(), as it was readded by Matthew
+#### End of 8/12/25
+----------------------------------

@@ -3,6 +3,7 @@ int ledPIN = 5;
 
 void led_setup () {
   pinMode(ledPIN, OUTPUT);
+  Serial.println("LED Is Setup");
 }
 
 void led_alert () {
