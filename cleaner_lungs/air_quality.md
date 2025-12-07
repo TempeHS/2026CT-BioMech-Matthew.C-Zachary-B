@@ -31,3 +31,5 @@ https://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/
 ### Removed main funcion air_quality to save space and make the ino file cleaner
 #### End of 3/12/25
 ----------------------------------
+### Error with the setup of air quality sensor is fixed with the removal of the "sensor.init" part.
+###
