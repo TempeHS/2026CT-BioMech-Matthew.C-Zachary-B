@@ -105,7 +105,15 @@ const unsigned long SAMPLE_TIME_MS = 500;
 
 ####  8/12/25
 
- - 3/4 sensors work
- - Only led is not working
+  - Issue with the serial monitor (Air quality sensor) resolved
+
+  - 3/4 sensors work
+      - Only led is not working
+
+  - After dust setup was fixed, dust + speaker set up and loop appeared in the serial monitor
+
+  - Dust sensor loop text appears but air quality sensor loop text doesn't
 
 #### End of 8/12/25
+
+-------------------------------------------------------------------------------------------------------------------------------------

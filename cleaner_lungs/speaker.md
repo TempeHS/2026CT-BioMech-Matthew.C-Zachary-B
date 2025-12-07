@@ -57,3 +57,14 @@ Speaker should make a continous beeping sound with delay in between beeps.
 #### End of 3/12/25
 
 ---------------------------------------------------------
+
+#### 8/12/25
+
+- Speaker setup works
+
+- Speaker works with dust sensor and air quality sensor
+    - Sensor beeped when air quality was bad or dust was detected
+
+#### End of 8/12/25
+
+------------------------------------------------------------
