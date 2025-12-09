@@ -8,10 +8,7 @@ void led_setup () {
 
 void led_alert () {
   digitalWrite(ledPIN, HIGH);
-  delay(50);
+  delay(500);
   digitalWrite(ledPIN, LOW);
-  delay(50);
-  digitalWrite(ledPIN, HIGH);
-  delay(50);
-  digitalWrite(ledPIN, LOW);
+  delay(500);
 }
