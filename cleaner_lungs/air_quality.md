@@ -36,3 +36,8 @@ https://wiki.seeedstudio.com/Grove-Air_Quality_Sensor_v1.3/
 ### Re-removed air_quality(), as it was readded by Matthew
 #### End of 8/12/25
 ----------------------------------
+### Air quality setup still has issues, as it does not start
+### Same issues as before that were thought to be fixed keep coming up again
+### AI Has been consulted many times but is not helping
+#### End of 10/12/25
+----------------------------------
